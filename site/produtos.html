@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="homepage.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="produtos">
+    <h2>Nossos Produtos</h2>
+    <div class="lista-produtos">
+      <div class="produto" onclick="abrirModal('Kit 3 remos', 'Leve para casa um pedaço da herança cultural da Ilha do Marajó com este autêntico kit de 3 remos. Feitos em madeira e decorados com os grafismos milenares da cerâmica marajoara, esses remos são ideais para dar um toque de aventura, história e exotismo à sua decoração. Uma verdadeira obra de arte que reflete a beleza e a tradição do Norte do Brasil.')">
+        <img src="imagens\remos.jpg" alt="Produto 1">
+        <h3>Kit 3 remos</h3>
+        <p>R$ 830,00</p>
+      </div>
+      <div class="produto" onclick="abrirModal('Vasos marajoaras', 'Com seu design único e padrões geométricos, o vaso marajoara é mais que um item de decoração, é um símbolo da arte ancestral. Produzido em cerâmica de alta qualidade e pintado à mão, ele traz a elegância dos motivos ocre, vermelho e preto da cultura marajoara para o seu ambiente. Perfeito para arranjos florais ou como uma peça central que celebra a história e a beleza amazônica.')">
+        <img src="imagens\vasos.jpg" alt="Produto 2">
+        <h3>Vasos marajoaras</h3>
+        <p>R$ 280,00</p>
+      </div>
+      <div class="produto" onclick="abrirModal('redes de mosqueiro', 'Para quem busca descanso e tranquilidade, as redes de Mosqueiro são a escolha perfeita. Famosas por sua durabilidade e conforto, são ideais para relaxar à beira-mar ou em sua casa. Inspiradas na ilha balneária de Belém, essas redes trazem a sensação de brisa e calmaria, convidando a um momento de puro relaxamento.')">
+        <img src="imagens\rede.jpeg" alt="Produto 3">
+        <h3>redes de mosqueiro</h3>
+        <p>R$ 120,00</p>
+      </div>
+      <div class="produto" onclick="abrirModal('Cuias', 'Essencial para saborear o tradicional tacacá, a cuia é um artefato indígena feito a partir do fruto da cuieira. As cuias de tacacá são cuidadosamente raspadas e pintadas, com detalhes que contam a história e a tradição do Baixo Amazonas. Uma peça autêntica para apreciar um dos sabores mais marcantes da Amazônia.')">
+        <img src="imagens\CUIA.jpeg" alt="Produto 4">
+        <h3>Cuias</h3>
+        <p>R$ 80,00</p>
+      </div>
+      <div class="produto" onclick="abrirModal('Barquinhos de miriti', 'Os barquinhos de miriti são brinquedos artesanais feitos da palmeira de miriti, um patrimônio cultural do Pará. Com sua leveza e cores vibrantes, eles flutuam e encantam, remetendo às tradições ribeirinhas e à alegria da cultura amazônica. Uma peça decorativa e lúdica que celebra a criatividade e a poesia do artesanato paraense.')">
+        <img src="imagens\barquinhos.jpg" alt="Produto 5">
+        <h3>Barquinhos de miriti</h3>
+        <p>R$ 140,00</p>
+      </div>
+      <div class="produto" onclick="abrirModal('Bonecos de miriti', 'Feitos da fibra de miriti, os bonecos são uma das mais autênticas formas de artesanato do Pará, reconhecidos por sua leveza e cores vivas. Eles representam a cultura popular, a fauna e a flora amazônica de forma única e encantadora. Cada boneco é uma expressão de arte e tradição, perfeita para colecionar e presentear.')">
+        <img src="imagens\bonecos.jpg" alt="Produto 6">
+        <h3>Bonecos de miriti</h3>
+        <p>R$ 100,00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="fechar" onclick="fecharModal()">&times;</span>
+      <h3 id="modal-titulo"></h3>
+      <p id="modal-descricao"></p>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal(titulo, descricao) {
+      document.getElementById('modal-titulo').innerText = titulo;
+      document.getElementById('modal-descricao').innerText = descricao;
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function fecharModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

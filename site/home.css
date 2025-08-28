@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #222;
+  padding: 15px 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+.destaques {
+  padding: 40px;
+  text-align: center;
+}
+
+.destaques h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.produtos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.produto {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 200px;
+}
+
+.produto img {
+  width: 100%;
+}
+
+.produto h3 {
+  margin: 10px 0;
+}
+
+.produto p {
+  color: green;
+  font-weight: bold;
+}
